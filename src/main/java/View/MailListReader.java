@@ -30,14 +30,12 @@ public class MailListReader {
         //EJEMPLO 2
 
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
-            return stream.filter(line -> isMail(line)).map(line-> new Mail(line)).collect(Collectors.toList());
+            return stream.filter(line -> Mail.isMail(line)).map(line-> new Mail(line)).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    private boolean isMail(String line) {
-        return line.matches("^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$");
-    }
+
 }

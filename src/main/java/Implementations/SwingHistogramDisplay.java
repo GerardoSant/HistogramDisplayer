@@ -8,7 +8,6 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -20,8 +19,8 @@ public class SwingHistogramDisplay extends ApplicationFrame implements Histogram
         super("Histograma");
         this.histogram=histogram;
         setContentPane(createPanel());
-
         pack();
+        setLocationRelativeTo(null);
     }
 
     public void execute(){
@@ -32,7 +31,7 @@ public class SwingHistogramDisplay extends ApplicationFrame implements Histogram
         JPanel panel = new JPanel();
         ChartPanel chartPanel = new ChartPanel(createChart(createDataset()));
         chartPanel.setPreferredSize(new Dimension(800,600));
-        panel.add(chartPanel);
+        panel.add(chartPanel, BorderLayout.CENTER);
         return panel;
     }
 
@@ -49,7 +48,6 @@ public class SwingHistogramDisplay extends ApplicationFrame implements Histogram
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         for (Object key : histogram){
             dataset.addValue(histogram.getCount(key), "",""+key);
-
         }
         return dataset;
     }
