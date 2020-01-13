@@ -3,7 +3,7 @@ import Implementations.SwingHistogramDisplay;
 import View.MailHistogramBuilder;
 import View.MailListReader;
 
-public class Main {
+public class Kata4 {
 
     public static void main(String[] args) {
         SwingHistogramDisplay swingHistogramDisplay =

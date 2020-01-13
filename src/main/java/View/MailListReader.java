@@ -32,6 +32,7 @@ public class MailListReader {
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
             return stream.filter(line -> Mail.isMail(line)).map(line-> new Mail(line)).collect(Collectors.toList());
         } catch (IOException e) {
+            System.out.println("Error durante la lectura del archivo. Archivo o ruta incorrecta.");
             e.printStackTrace();
         }
         return null;
