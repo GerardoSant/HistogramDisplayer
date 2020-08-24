@@ -6,6 +6,11 @@ Kata 4 made for ULPGC "IS2" subject. Architecture for creating Histograms and di
 
 Only need to be cloned and executed. Main is located in class 'Kata4' at the 'Controller' package.
 
+## Preview
+
+![alt-text](https://github.com/GerardoSant/Kata4/blob/master/preview/preview.PNG)
+
+
 ## Built With
 
 * [Java](https://www.java.com/es/) - Programming language
