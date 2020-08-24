@@ -4,7 +4,7 @@ Kata 4 made for ULPGC "IS2" subject. Architecture for creating Histograms and di
 
 ## Installing/Running
 
-Only need to be cloned and executed.
+Only need to be cloned and executed. Main is located in class 'Kata4' at the 'Controller' package.
 
 ## Built With
 
